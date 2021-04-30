@@ -1,0 +1,32 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+
+int main() {
+    srand (time(NULL));
+    int sellect_num=rand()%1000;
+    int time_attempts= 0;
+    int input=-1;
+    cout<<"\t~~~~~~ START  GAME ~~~~~~"<<endl;
+
+    cout<<"Enter The Number: "<<endl;
+    while(input != sellect_num){
+
+        cin>>input;
+        if(input >  sellect_num){
+            cout<<"lower:...."<<endl;
+        }
+        else if(input <sellect_num){
+            cout<<"Higher:..."<<endl;
+        }
+        time_attempts++;
+    }
+
+    cout<<"GooD!! You find the number...."<<endl;
+    cout<<"Sellect Number: "<<sellect_num<<endl;
+    cout<<"Attempts: "<<time_attempts<<endl;
+    cout<<"\t~~~~~~ FINISH GAME ~~~~~~"<<endl;
+    return 0;
+}
